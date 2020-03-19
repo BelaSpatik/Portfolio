@@ -1,0 +1,399 @@
+body {
+    margin: 0px;
+    background: linear-gradient(180deg, #0A092C, rgba(28, 28, 240, 0.2), #0A092C);
+    background-blend-mode: color-burn;
+    background-color: #0A092C;
+    color: whitesmoke
+}
+
+body a {
+    text-decoration: none;
+    color: inherit
+}
+
+nav {
+    background-image: url(images/colorful1.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    z-index: 2;
+    border-color: magenta;
+    border-bottom-style: ridge;
+    box-shadow: -1px 1px 10px black;
+}
+nav ul {
+    /*background-color: yellow;*/
+    align-self: center;
+}
+
+nav li {
+    /*background-color: red;*/
+    list-style: none;
+    display: inline;
+    margin: 25px;
+    font-size: 24px;
+}
+
+#welcome-section {
+    background: linear-gradient(180deg, #0A092C, rgba(28, 28, 240, 0.2), #0A092C);
+    background-blend-mode: color-burn;
+    background-color: #0A092C;
+    height: 88vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#welcome-section h1 {
+    margin: 0px 10px;
+    font-size: 60px;
+}
+    
+#welcome-section p {
+    margin: 0px;
+    font-size: 25px;
+    line-height: 1.5;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: 3px solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: 1.5px; /* Adjust as needed */
+    width: 26ch;
+    animation: 
+          typing 3.5s steps(26),
+          blink-caret 1s step-end infinite;
+      }
+      
+      /* The typing effect */
+      @keyframes typing {
+        from { width: 0 }
+        to { width: 26% }
+      }
+      
+      /* The typewriter cursor effect */
+      @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: orange }
+      }
+
+#projects {
+    background-image: url(images/colorful3.jpg);
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 0px
+    
+}
+
+#projects h2 {
+    font-size: 38px;
+    text-shadow: 0px 0px 5px rgba(21, 25, 155);
+    border-bottom: 2px solid rgba(255, 202, 40);
+    max-width: 500px; 
+    margin: 0px 10px 50px 10px;
+    align-self: center
+}
+
+#projects p {
+    line-height: 20px;
+    font-size: 20px
+}
+
+#projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 25px 25px;
+    width: 100%;
+    justify-self: start;
+    box-sizing: border-box;
+    padding: 0px 20px
+}
+
+.project-tile {
+    background: linear-gradient(90deg, rgba(21, 25, 155), rgba(27, 37, 191, 0.8), rgba(27, 37, 191, 0.8), rgba(21, 25, 155));
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid rgba(3, 169, 244);
+    box-shadow: 0px 0px 5px rgba(21, 25, 155);
+    box-sizing: content-box;
+}
+
+.project-tile:hover {
+    cursor: pointer;
+    border-color: rgba(255, 202, 40)
+}
+
+.project-tile img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    border-bottom: 1px solid rgba(3, 169, 244)
+}
+
+
+.project-img {
+    position: relative;
+    font-size: 0px;
+    height: 100%
+}
+
+.project-img .overlay-color {
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.35);
+    opacity: 0.6;
+    position: absolute;
+}
+
+.project-img .overlay-color:hover {
+    opacity: 0;  
+}
+
+.tags {
+    color: transparent;
+    transition: color 0.3s ease-out;
+}
+
+.tribute-page:hover .tags, .survey-form:hover .tags, .product-landing-page:hover .tags, .technical-documentation-page:hover .tags, 
+.webcourse-page:hover .tags, .new-project:hover .tags {
+    color: orange;
+}
+
+#contact-section {
+    text-align: center;
+    margin: 80px 20px;
+    height: 285px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+#contact-header h3 {
+    margin: 10px auto 10px auto;
+    font-size: 60px;
+    background: -webkit-linear-gradient(rgb(255,61,225), rgba(255, 202, 40)); 
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#contact-header p {
+    font-family: 'Lobster Two', cursive;
+    font-size: 28px;
+    margin: 10px auto 10px auto;
+}
+
+#contact-header i {
+    font-size: 25px
+}
+
+#contact-links {
+    width: 100%;
+    margin-top: 40px;
+    font-size: 20px;
+}
+
+/*Need a separated class with inline-block for the move-down effect*/
+.btn {
+    display: inline-block
+}
+
+.contact-details {
+    padding: 0px 40px;
+    transition: transform 0.3s ease-out;
+}
+
+.contact-details:hover {
+    transform: translateY(10px);
+    text-shadow: 0.1px 1.5px 6px magenta;
+    cursor: pointer;
+  }
+
+#contact-links i {
+    color: rgba(255, 202, 40)
+}
+
+footer {
+    background-image: url(images/colorful1.jpg);
+    background-size: auto;
+    height: 80px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: 'Lobster Two', cursive;
+}
+
+footer p {
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+footer .copyright {
+    font-size: 16px;
+    opacity: 0.85
+}
+
+footer .name {
+    background: -webkit-linear-gradient(rgb(255,61,225), rgba(255, 202, 40));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* sizing #project-tiles */
+@media (max-width: 779px) {
+
+    #project-tile {
+        width: 70%;
+        margin: auto
+    }
+   
+    #project-tile img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        border-bottom: 1px solid rgba(3, 169, 244);
+    }
+}
+
+/* sizing h1 and h2 */
+@media (max-width: 530px) {
+    #welcome-section h1 {
+        font-size: 53px
+    }
+    #projects h2 {
+        font-size: 35px
+    }
+}
+
+/* sizing #contact-links + nav and footer bars */
+@media (max-width: 797px) {
+    
+    .contact-details {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 635px) {
+    nav, footer {
+        height: 60px
+    }
+}
+
+/* sizing #welcome-section typing effect */
+@media (max-width: 550px) {
+
+    #welcome-section p {
+        animation: 
+              typing 3.5s steps(26),
+              blink-caret 1s step-end infinite;
+          }
+          
+          /* The typing effect */
+          @keyframes typing {
+            from { width: 0 }
+            to { width: 65% }
+          }
+}
+
+@media (min-width: 551px) and (max-width: 650px) {
+
+    #welcome-section p {
+        animation: 
+              typing 3.5s steps(26),
+              blink-caret 1s step-end infinite;
+          }
+          
+          /* The typing effect */
+          @keyframes typing {
+            from { width: 0 }
+            to { width: 50% }
+          }
+}
+
+@media (min-width: 651px) and (max-width: 750px) {
+
+    #welcome-section p {
+        animation: 
+              typing 3.5s steps(26),
+              blink-caret 1s step-end infinite;
+          }
+          
+          /* The typing effect */
+          @keyframes typing {
+            from { width: 0 }
+            to { width: 45% }
+          }
+}
+
+@media (min-width: 751px) and (max-width: 850px) {
+
+    #welcome-section p {
+        animation: 
+              typing 3.5s steps(26),
+              blink-caret 1s step-end infinite;
+          }
+          
+          /* The typing effect */
+          @keyframes typing {
+            from { width: 0 }
+            to { width: 40% }
+          }
+}
+
+@media (min-width: 851px) and (max-width: 950px) {
+
+    #welcome-section p {
+        animation: 
+              typing 3.5s steps(26),
+              blink-caret 1s step-end infinite;
+          }
+          
+          /* The typing effect */
+          @keyframes typing {
+            from { width: 0 }
+            to { width: 35% }
+          }
+}
+
+@media (min-width: 951px) and (max-width: 1050px) {
+
+    #welcome-section p {
+        animation: 
+              typing 3.5s steps(26),
+              blink-caret 1s step-end infinite;
+          }
+          
+          /* The typing effect */
+          @keyframes typing {
+            from { width: 0 }
+            to { width: 30% }
+          }
+}
+
+@media (min-width: 1051px) {
+
+    #welcome-section p {
+        animation: 
+              typing 3.5s steps(26),
+              blink-caret 1s step-end infinite;
+          }
+          
+          /* The typing effect */
+          @keyframes typing {
+            from { width: 0 }
+            to { width: 26% }
+          }
+}
+
